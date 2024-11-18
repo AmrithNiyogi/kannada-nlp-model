@@ -1,15 +1,14 @@
-# kannada_nlp/utils.py
-
 import json
 import re
-from nltk.tokenize import word_tokenize
+
 
 class NLPUtils:
 
     @staticmethod
     def preprocess_text(text):
-        """Basic preprocessing: remove non-alphanumeric characters."""
-        text = re.sub(r'[^\w\s]', '', text.lower())
+        """Basic preprocessing: remove non-alphanumeric characters except Kannada characters and spaces."""
+        # Removing English punctuation but keeping Kannada unicode characters and spaces
+        text = re.sub(r'[^\u0C80-\u0CFF\s]', '', text)  # Keep Kannada unicode characters and spaces
         return text
 
     @staticmethod
