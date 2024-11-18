@@ -6,13 +6,26 @@ from wordcloud import WordCloud
 from sklearn.metrics import confusion_matrix, ConfusionMatrixDisplay
 import pandas as pd
 
+
 class Visualizer:
     def __init__(self):
         sns.set(style="whitegrid")
 
     def plot_word_cloud(self, text_data):
         """Generate a word cloud from the text data."""
-        wordcloud = WordCloud(width=800, height=400, background_color='white').generate(' '.join(text_data))
+        wordcloud = WordCloud(
+            width=800,
+            height=400,
+            background_color='white',
+            max_words=200,
+            min_font_size=20,
+            colormap='viridis',
+            contour_color='black',
+            contour_width=2,
+            relative_scaling=0.5,
+            font_path='/usr/share/fonts/truetype/noto/NotoSansKannada-Regular.ttf'  # Path to Kannada font
+        ).generate(' '.join(text_data))
+
         plt.figure(figsize=(10, 5))
         plt.imshow(wordcloud, interpolation='bilinear')
         plt.axis('off')
@@ -39,7 +52,6 @@ class Visualizer:
 
     def plot_accuracy_loss(self, history):
         """Plot accuracy and loss curves."""
-        # Assuming history is a dictionary with 'accuracy', 'val_accuracy', 'loss', 'val_loss'
         plt.figure(figsize=(12, 5))
 
         # Accuracy
@@ -68,17 +80,31 @@ class Visualizer:
         df = pd.DataFrame({'text': text_data, 'label': labels})
         top_words = {}
 
+        # Loop through each sentiment and create word clouds
         for sentiment in df['label'].unique():
+            # Join all the words in the current sentiment class
             words = ' '.join(df[df['label'] == sentiment]['text'])
-            wordcloud = WordCloud(width=800, height=400, background_color='white').generate(words)
+
+            # Generate the word cloud with a font path for Kannada
+            wordcloud = WordCloud(
+                width=800,
+                height=400,
+                background_color='white',
+                max_words=n,  # Limit to the top n words
+                font_path='/usr/share/fonts/truetype/noto/NotoSansKannada-Regular.ttf'  # Path to Kannada font
+            ).generate(words)
+
+            # Store the generated word cloud for the current sentiment
             top_words[sentiment] = wordcloud
 
         # Plotting
         plt.figure(figsize=(15, 10))
         for i, (sentiment, wc) in enumerate(top_words.items()):
-            plt.subplot(2, 2, i + 1)
+            plt.subplot(2, 2, i + 1)  # Adjust the number of subplots based on sentiments
             plt.imshow(wc, interpolation='bilinear')
             plt.axis('off')
-            plt.title(f'Top Words for Sentiment: {sentiment}')
+            plt.title(f'Top {n} Words for Sentiment: {sentiment}')
+
+        # Adjust layout and display the plot
         plt.tight_layout()
         plt.show()
