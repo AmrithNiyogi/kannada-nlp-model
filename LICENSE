@@ -1,21 +1,39 @@
-MIT License
+Kannada NLP Model License
+Version 1.0 - 18/11/2024
 
-Copyright (c) 2024 AmrithNiyogi
+1. Definitions
+"The Model": Refers to the Kannada NLP model and its associated code, datasets, scripts, and any related materials.
+"You" or "User": Any individual or organization that downloads, installs, or uses The Model.
+2. License Grant
+You are granted a non-exclusive, non-transferable, revocable license to use, modify, and distribute The Model according to the terms below.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+3. Permitted Uses
+Personal and Academic Use: You may use, modify, and distribute The Model for non-commercial purposes, including educational research and experimentation.
+Commercial Use: Commercial use of The Model is allowed with prior written permission and may require a licensing fee. Please contact amrithniyogi25@gmail.com for commercial licensing details.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+4. Modification Rights
+You may modify The Model for personal or academic purposes, but any changes made must be clearly documented.
+If you redistribute The Model (modified or unmodified), the modifications must be shared under this same license or a compatible open-source license.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+5. Redistribution
+You may redistribute The Model, including in modified form, under the terms of this license. Redistribution must include a copy of this license and any associated documentation.
+
+6. Attribution
+Any distribution or use of The Model, modified or unmodified, must provide proper attribution to the original author(s), as outlined below:
+Attribution should include the following:
+*"This work uses the Kannada NLP Model created by Amrith Niyogi, available at https://github.com/AmrithNiyogi/kannada-nlp-model."
+
+7. Limitations
+You may not use The Model to engage in any unlawful activity, including but not limited to, data manipulation, harassment, or generation of harmful content.
+The Model cannot be used to create or enhance any products that directly compete with this package unless authorized by the original author(s).
+8. Warranty Disclaimer
+The Model is provided "as-is," without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event shall the author(s) or contributors be liable for any damages arising from the use of The Model.
+
+9. Termination
+This license is effective until terminated. You may terminate it at any time by ceasing to use The Model. We reserve the right to terminate this license if you violate any of its terms.
+
+10. Commercial License
+If you wish to use The Model for commercial purposes not covered under this license, please contact amrithniyogi25@gmail.com to arrange for a commercial license.
+
+11. Governing Law
+This license shall be governed by the laws of India. Any disputes shall be subject to the exclusive jurisdiction of the courts in Bengaluru, India.

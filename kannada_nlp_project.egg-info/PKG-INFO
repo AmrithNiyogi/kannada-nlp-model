@@ -1,3 +1,24 @@
+Metadata-Version: 2.1
+Name: kannada_nlp_project
+Version: 0.1.0
+Summary: A package for Kannada NLP tasks
+Home-page: https://github.com/AmrithNiyogi/kannada-nlp-model
+Author: Your Name
+Author-email: amrithniyogi25@gmail.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Custom :: Kannada NLP Model License v1.0
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tensorflow>=2.0
+Requires-Dist: pandas>=1.1.0
+Requires-Dist: matplotlib>=3.0.0
+Requires-Dist: seaborn>=0.10.0
+Requires-Dist: wordcloud>=1.8.1
+Requires-Dist: nltk>=3.5
+Requires-Dist: scikit-learn>=0.24.0
+
 # Kannada NLP Project
 
 A Python package for Natural Language Processing (NLP) tasks in Kannada. This package includes several models, tokenizers, augmenters, and utilities for various NLP applications like sentiment analysis, named entity recognition (NER), text classification, and more, specifically designed for the Kannada language.
