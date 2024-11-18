@@ -10,7 +10,7 @@ class CustomTokenizer:
 
     def word_tokenize(self, text):
         """
-        Tokenizes text into words using a regular expression.
+        Tokenizes text into words using a regular expression suitable for Kannada.
 
         Args:
         - text: The input text string.
@@ -18,7 +18,8 @@ class CustomTokenizer:
         Returns:
         - A list of words in the text.
         """
-        return re.findall(r"\b\w+\b", text)
+        # Updated regex for Kannada word tokenization: handles word boundaries better
+        return re.findall(r'[ಅ-ಹಾ-ೞ]+(?:[\'-][ಅ-ಹಾ-ೞ]+)*', text)
 
     def syllable_tokenize(self, text):
         """
@@ -52,4 +53,3 @@ class CustomTokenizer:
             return self.syllable_tokenize(text)
         else:
             raise ValueError("Unsupported tokenization level: {}".format(level))
-
